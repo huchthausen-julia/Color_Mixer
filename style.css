@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input#red {
+  accent-color: red;
+}
+
+input#green {
+  accent-color: green;
+}
+
+input#blue {
+  accent-color: blue;
+}
+
+header {
+  background-color: bisque;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#color-value {
+  color: black;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: #000000;
+  font-size: 1rem;
+  border-radius: 0px;
+  width: 7rem;
+  height: 2.5rem;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.rc-btn::before,
+.rc-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #000000;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.rc-btn::before {
+  top: -2px;
+  left: -2px;
+}
+
+.rc-btn::after {
+  top: 2px;
+  left: 2px;
+}
+
+.rc-btn:hover::before,
+.rc-btn:hover::after {
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 425px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .range-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
